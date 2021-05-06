@@ -18,5 +18,36 @@
         android:id="@+id/movieDetailFragment"
         android:name="com.example.movieapp.ui.moviedetails.MovieDetailFragment"
         android:label="fragment_movie_detail"
-        tools:layout="@layout/fragment_movie_detail" />
+        tools:layout="@layout/fragment_movie_detail" >
+        <argument
+            android:name="posterImageURL"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="backgroundImageURL"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="voteAverrage"
+            app:argType="float" />
+        <argument
+            android:name="voteCount"
+            app:argType="integer" />
+        <argument
+            android:name="overview"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="title"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="language"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="releaseDate"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
 </navigation>

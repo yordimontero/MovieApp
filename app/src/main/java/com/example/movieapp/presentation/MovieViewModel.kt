@@ -18,7 +18,7 @@ class MovieViewModel(private val repository: MovieRepository) : ViewModel() {
         try {
             emit(
                     Resource.Success(
-                            Helper.NTuple4(
+                            Helper.NTuple3(
                                     repository.getUpcomingMovies(),
                                     repository.getPopularMovies(),
                                     repository.getTopRatedMovies()
