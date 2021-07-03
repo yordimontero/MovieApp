@@ -74,9 +74,10 @@ dependencies {
     implementation("androidx.room:room-runtime:2.3.0")
     // optional - Kotlin Extensions and Coroutines support for Room:
     implementation("androidx.room:room-ktx:2.3.0")
+    // kapt - Kotlin Annotation Processor:
     kapt("androidx.room:room-compiler:2.3.0")
 
-
+    
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
