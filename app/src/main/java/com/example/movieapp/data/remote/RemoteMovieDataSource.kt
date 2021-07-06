@@ -6,7 +6,7 @@ import com.example.movieapp.repository.WebService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class MovieDataSource(private val webService: WebService) {
+class RemoteMovieDataSource(private val webService: WebService) {
 
     suspend fun getUpcomingMovies(): MovieList = withContext(Dispatchers.IO) {
         webService.getUpcomingMovies(AppConstants.API_KEY)

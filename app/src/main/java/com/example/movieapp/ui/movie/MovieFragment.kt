@@ -1,7 +1,6 @@
 package com.example.movieapp.ui.movie
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -11,7 +10,7 @@ import androidx.recyclerview.widget.ConcatAdapter
 import com.example.movieapp.R
 import com.example.movieapp.core.Resource
 import com.example.movieapp.data.model.Movie
-import com.example.movieapp.data.remote.MovieDataSource
+import com.example.movieapp.data.remote.RemoteMovieDataSource
 import com.example.movieapp.databinding.FragmentMovieBinding
 import com.example.movieapp.presentation.MovieViewModel
 import com.example.movieapp.presentation.ViewModelFactory
@@ -29,7 +28,7 @@ class MovieFragment : Fragment(R.layout.fragment_movie), MovieAdapter.OnMovieCli
     private val viewModel by viewModels<MovieViewModel> {
         ViewModelFactory(
                 MovieRepositoryImpl(
-                        MovieDataSource(
+                        RemoteMovieDataSource(
                                 RetrofitClient.webService
                         )
                 )
