@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ConcatAdapter
 import com.example.movieapp.R
+import com.example.movieapp.core.InternetCheck
 import com.example.movieapp.core.Resource
 import com.example.movieapp.data.local.AppDatabase
 import com.example.movieapp.data.local.LocalMovieDataSource
@@ -112,7 +113,7 @@ class MovieFragment : Fragment(R.layout.fragment_movie), MovieAdapter.OnMovieCli
                     is Resource.Failure -> {
                         binding.progressBar.visibility = View.GONE
                         //Toast.makeText(requireContext(), resultEmitted.exception.message, Toast.LENGTH_LONG).show()
-                        Log.wtf("Exception", resultEmitted.exception.message)
+                        Log.wtf("Exception", resultEmitted.exception)
                     }
 
                 }
